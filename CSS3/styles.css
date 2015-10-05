@@ -38,7 +38,7 @@ div.container {
   height: 200px;
   perspective: 1000px;
 }
-.tile {
+div.container .tile {
   width: 200px;
   height: 200px;
   box-shadow: -5px 5px 5px #aaa;
@@ -52,16 +52,16 @@ div.container {
   text-transform: uppercase;
   color: #fff;
 }
-.front {
+div.container .front {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: blue;
   z-index: 2;
   backface-visibility: hidden;
   transform: rotateY(0deg);
 }
-.back {
+div.container .back {
   position: absolute;
   width: 100%;
   height: 100%;
