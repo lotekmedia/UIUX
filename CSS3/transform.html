@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<title>
+	</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<style>
+		div.base {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			text-align: center;
+			margin: 10px;
+			line-height: 200px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 30px;
+			text-transform: uppercase;
+			color: #fff;
+			float: left;
+		}
+		
+		div.example1 {
+			transition: background-color 2s, border-radius 3s, color 1s;
+		}
+		
+		div.example1:hover {
+			background-color: green;
+			border-radius: 20px;
+			color: #ff3;
+		}
+		
+		div.example2 {
+			transition: transform 5s;
+		}
+		
+		div.example2:hover {
+			transform: rotate(360deg);
+		}
+		
+		div.example3 {
+			transition: transform 5s;
+		}
+		
+		div.example3:hover {
+			transform: translateX(900px);
+		}
+		
+		.container {
+			position: relative;
+			margin: 10px auto;
+			width: 200px;
+			height: 200px;
+			perspective: 1000px;
+		}
+		
+		.tile {
+			width: 100%;
+			height: 100%;
+			border: solid 1px #ddd;
+			transform-style: preserve-3d;
+			transition: all 1.0s linear;
+		}
+		
+		.front {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			backface-visibility: hidden;
+			transform: rotateY(0deg);
+		}
+		
+		.back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			padding: 10px;
+			background-color: #aaa;
+			color: #839;
+			backface-visibility: hidden;
+			transform: rotateY(180deg);
+		}
+		
+		.tile:hover {
+			transform: rotateY(180deg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="base example1">Border</div>
+	<div class="base example2">Rotate 360</div>
+	<div class="base example3">Move Right</div>
+	<div class="container">
+		<div class="tile base">
+			<div class="front">my front</div>
+			<div class="back">my back</div>
+		</div>
+	</div>
+</body>
+
+</html>
